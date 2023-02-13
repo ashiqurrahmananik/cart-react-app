@@ -1,10 +1,11 @@
 import React from 'react'
+import Headnav from './Headnav'
 import Home from './Home'
 
 const Checkout = () => {
   return (
     <div>
-     <Home/>
+      <Headnav />
       Checkout Page
     </div>
   )
