@@ -8,6 +8,7 @@ const Cart = () => {
     (state) => state.allCart
   );*/
   const item = useSelector(state => state.allcart.cart);
+  const { totalQuantity, totalPrice } = useSelector(state => state.allcart);
 
   const dispatch = useDispatch();
   return (
@@ -20,14 +21,23 @@ const Cart = () => {
 
               <img src={data.image} width="200"></img>
               <p>{data.title}</p>
+              <p>{data.quantity}</p>
               <p>{data.price}</p>
 
+
             </div >
+
           )
 
         })
       }
-    </div>
+      <tr>
+        <td colSpan="2">Total</td>
+        <td>Totalquantity={totalQuantity}</td>
+        <td>Totalprice={totalPrice}</td>
+      </tr>
+
+    </div >
   )
 }
 

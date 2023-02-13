@@ -26,6 +26,7 @@ const Home = () => {
               <div className='body container'>
 
                 <img src={curElem.image} width="200"></img>
+                <p>{curElem.id}</p>
                 <p>{curElem.title}</p>
                 <p>{curElem.category}</p>
                 <p>{curElem.price}</p>
