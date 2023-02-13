@@ -2,6 +2,7 @@ import React from 'react'
 import Headnav from './Headnav'
 import Home from './Home'
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   /*const { cart, totalQuantity, totalPrice } = useSelector(
@@ -31,11 +32,11 @@ const Cart = () => {
 
         })
       }
-      <tr>
-        <td colSpan="2">Total</td>
-        <td>Totalquantity={totalQuantity}</td>
-        <td>Totalprice={totalPrice}</td>
-      </tr>
+      <div className='container'>
+        <h6>Totalquantity={totalQuantity}</h6><br />
+        <h6>Totalprice={totalPrice}</h6>
+        <button className='btn btn-danger'><Link to="/checkout">checkout</Link></button>
+      </div>
 
     </div >
   )
