@@ -4,16 +4,17 @@ import Home from './Home'
 import { useSelector, useDispatch } from "react-redux";
 
 const Cart = () => {
-  const { cart, totalQuantity, totalPrice } = useSelector(
+  /*const { cart, totalQuantity, totalPrice } = useSelector(
     (state) => state.allCart
-  );
+  );*/
+  const item = useSelector(state => state.allcart.cart);
 
   const dispatch = useDispatch();
   return (
     <div>
       <Headnav />
       {
-        cart.map((data) => {
+        item.map((data) => {
           return (
             <div className='body container'>
 
